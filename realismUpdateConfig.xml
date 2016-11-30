@@ -1,5 +1,9 @@
 ﻿<realismUpdateConfig>
 
+	<globalSettings>
+		<overallTireFrictionModifier value="0.7" /> <!-- the friction of all tires gets multiplied by this value -->
+	</globalSettings>
+
 
   
 	<!-- Kuhn VariMaster data\vehicles\tools\kuhn\kuhnVariMaster153.xml   finetuning to do -->
@@ -7,7 +11,6 @@
 		<realism useRealism="true" >
 			<powerConsumer workingWidth="2.0" workingDepth="0.2" staticForceFactor="0.76" dynamicForceFactor="1.2" forceNode="0>" staticWeightFactor="0.3" dynamicWeightFactor="0.6" />
 		</realism>
-		
 	</vehicle>
 
 	<!-- Amazone Cayron data\vehicles\tools\amazone\amazoneCayron200.xml    finetuning to do -->
@@ -24,6 +27,31 @@
 			<powerConsumer workingWidth="3.0" workingDepth="0.05" staticForceFactor="0.2" dynamicForceFactor="2" forceNode="0>" staticWeightFactor="0.01" dynamicWeightFactor="0.03" />
 		</realism>	
 	</vehicle>
+	
+
+	<!-- Kuhn Cultimer L300 data\vehicles\tools\kuhn\kuhnCultimerL300.xml   finetuning to do -->
+	<vehicle zipName="baseGame" xmlName="data/vehicles/tools/kuhn/kuhnCultimerL300.xml" >
+		<realism useRealism="true" >
+			<powerConsumer workingWidth="3.0" workingDepth="0.25" staticForceFactor="0.55" dynamicForceFactor="1.2" forceNode="0>" staticWeightFactor="0.1" dynamicWeightFactor="0.3" />
+		</realism>
+	</vehicle>	
+	
+	<!-- Horsch Terrano 4FX finetuning to do -->
+	<vehicle zipName="baseGame" xmlName="data/vehicles/tools/horsch/horschTerrano4FX.xml" >
+		<realism useRealism="true" >
+			<powerConsumer workingWidth="4.0" workingDepth="0.25" staticForceFactor="0.55" dynamicForceFactor="1.2" forceNode="0>" staticWeightFactor="0.1" dynamicWeightFactor="0.3" />
+		</realism>
+	</vehicle>	
+	
+	
+	<!-- New Holland Roll Belt 150    finetuning to do -->
+	<vehicle zipName="baseGame" xmlName="data/vehicles/trailers/newHolland/newHollandRollBelt150.xml" >
+		<realism useRealism2="true" >
+			<baler isRoundBaler="true">
+				<roundBaler averageCapacity="3500" maximumCapacity="4000" basePowerUsage="10" turnOnPowerMultiplier="2.5" turnOnPowerTime="3" powerIncreasePerLiterFx="1" powerIncreaseHayMultiplier="0.45" powerIncreaseStrawMultiplier="0.35" powerIncreaseGrassMultiplier="0.7" />
+			</baler>
+		</realism>
+	</vehicle>	
 	
 <!-- 
 	

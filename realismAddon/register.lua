@@ -6,8 +6,8 @@
 RegistrationHelper_StuffAndThings = {};
 RegistrationHelper_StuffAndThings.isLoaded = false;
 
-if SpecializationUtil.specializations['tireFrictionUpdate'] == nil then
-   -- SpecializationUtil.registerSpecialization('tireFrictionUpdate', 'tireFrictionUpdate', g_currentModDirectory .. 'tireFrictionUpdate.lua')
+if SpecializationUtil.specializations['realismSpec_generalVehicleUpdates'] == nil then
+    SpecializationUtil.registerSpecialization('realismSpec_generalVehicleUpdates', 'realismSpec_generalVehicleUpdates', g_currentModDirectory .. 'realismSpec_generalVehicleUpdates.lua')
     RegistrationHelper_StuffAndThings.isLoaded = false;
 end
 
@@ -19,7 +19,7 @@ function RegistrationHelper_StuffAndThings:loadMap(name)
         end
         g_currentMission.RegistrationHelper_StuffAndThings_isLoaded = true
     else
-        print("Error: tireFrictionUpdate has been loaded already!");
+        print("Error: realismSpec_generalVehicleUpdates has been loaded already!");
     end
 end
 
@@ -42,9 +42,8 @@ end
 function RegistrationHelper_StuffAndThings:register()
     for _, vehicle in pairs(VehicleTypeUtil.vehicleTypes) do
         if vehicle ~= nil then
-          --  table.insert(vehicle.specializations, SpecializationUtil.getSpecialization("tireFrictionUpdate"))
-           -- table.insert(vehicle.specializations, SpecializationUtil.getSpecialization("realismUpdate_plough"))
-			
+           table.insert(vehicle.specializations, SpecializationUtil.getSpecialization("realismSpec_generalVehicleUpdates"))
+
 			
 		--	for i = 1, table.maxn(vehicle.specializations) do
 		--		local vs = vehicle.specializations[i];

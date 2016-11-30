@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="32">
     <title>
-        <de>Realism Addon</de>
-        <en>Realism Addon<en>
+        <de>Stuff and Things..</de>
+        <en>Stuff and Things..</en>
     </title>
     <description>
         <de>
@@ -13,7 +13,7 @@
 	</en>
     </description>
     <author>modelleicher</author>
-    <version>0.1.0</version>
+    <version>0.1.0.1</version>
     <iconFilename>store.png</iconFilename>
     <multiplayer supported="true"/>
     <extraSourceFiles>
@@ -26,6 +26,8 @@
 		<sourceFile filename="realismUpdate_baler.lua" />
 		<sourceFile filename="realismUpdate_loadXMLConfigData.lua" />
     </extraSourceFiles>
-	<inputBindings>		
+	<inputBindings>	
+		    <input name="R_4WD" key1="KEY_5" button=""/>
+		    <input name="R_DIFFLOCK" key1="KEY_6" button=""/>
     </inputBindings>
 </modDesc>
