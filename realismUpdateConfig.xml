@@ -1,0 +1,69 @@
+﻿<realismUpdateConfig>
+
+
+  
+	<!-- Kuhn VariMaster data\vehicles\tools\kuhn\kuhnVariMaster153.xml   finetuning to do -->
+	<vehicle zipName="baseGame" xmlName="data/vehicles/tools/kuhn/kuhnVariMaster153.xml" >
+		<realism useRealism="true" >
+			<powerConsumer workingWidth="2.0" workingDepth="0.2" staticForceFactor="0.76" dynamicForceFactor="1.2" forceNode="0>" staticWeightFactor="0.3" dynamicWeightFactor="0.6" />
+		</realism>
+		
+	</vehicle>
+
+	<!-- Amazone Cayron data\vehicles\tools\amazone\amazoneCayron200.xml    finetuning to do -->
+	<vehicle zipName="baseGame" xmlName="data/vehicles/tools/amazone/amazoneCayron200.xml" >
+		<realism useRealism="true" >
+			<powerConsumer workingWidth="3.0" workingDepth="0.28" staticForceFactor="0.8" dynamicForceFactor="1.2" forceNode="0>" staticWeightFactor="0.3" dynamicWeightFactor="0.9" />
+		</realism>	
+	</vehicle>
+
+	
+	<!-- Kverneland Qualidisc Farmer data\vehicles\tools\kverneland\kvernelandQualidisc3m.xml   finetuning to do -->
+	<vehicle zipName="baseGame" xmlName="data/vehicles/tools/kverneland/kvernelandQualidisc3m.xml" >
+		<realism useRealism="true" >
+			<powerConsumer workingWidth="3.0" workingDepth="0.05" staticForceFactor="0.2" dynamicForceFactor="2" forceNode="0>" staticWeightFactor="0.01" dynamicWeightFactor="0.03" />
+		</realism>	
+	</vehicle>
+	
+<!-- 
+	
+	example:
+	
+	<vehicle zipName="name_of_zip" xmlName="name_of_xml" >
+	
+		-- realism values
+		<realism useRealism="true">
+			-- add realism stuff here (powerConsumer for example or baler)
+			<example stuff="0" />
+		</realism>
+		
+		<anotherExample things="1" />
+		
+		-- override base values
+		<overrideValue path="xml_path_to_value" value="value_to_replace_with" valueType="type_of_value" />
+	</vehicle>
+	
+	name_of_zip = The name of the Zip file. If vehicle is base game vehicle you have to use "baseGame" as value.
+	name_of_xml = The name of the xml file (example Eicher3066.xml). If the vehicle is a base game vehicle use the path starting from data (example data/vehicles/tools/kverneland/kvernelandQualidisc3m.xml)
+	
+	overrideValue => you can overwrite every possible value in the xml file. It will happen after XML is loaded before xml values are read by the specializations.
+	so you can change each and every value in the xml this way without changing the xml itself. (example center of mass to make it more realistic)
+	
+	xml_path_to_value = the path to the value. (example "vehicle.components.component1#centerOfMass")
+	value_to_replace_with = the value you want it to replace with (example "0 0.3 -0.1" for the center of mass one)
+	type_of_value = type of the value (string, bool, int, float)
+	
+	To load values from the config file as well as from vehicle xml file if config file doesn't have the vehicle in it use following method in script:
+	instead of this:
+	local exampleValue = getXMLFloat(self.xmlFile, "vehicle.realism.example#stuff");
+	use this:
+	local exampleValue = r_getXMLFloat(self, "realism.example#stuff");
+	
+	As you can see, r_getXMLFloat replaces getXMLFloat, the first parameter is self, not self.xmlFile and on the path you leave the "vehicle." part away.
+	The function then will check if the vehicle is found in the config file and load the values there, if the vehicle isn't in the config file it will
+	load from the vehicle xml as usual.
+	
+-->
+	
+	
+</realismUpdateConfig>
