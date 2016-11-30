@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="32">
+    <title>
+        <de>Realism Addon</de>
+        <en>Realism Addon<en>
+    </title>
+    <description>
+        <de>
+<![CDATA[This mod does a variety of stuff.. and things.]]>
+	</de>
+	<en>
+<![CDATA[This mod does a variety of stuff.. and things.]]>	
+	</en>
+    </description>
+    <author>modelleicher</author>
+    <version>0.1.0</version>
+    <iconFilename>store.png</iconFilename>
+    <multiplayer supported="true"/>
+    <extraSourceFiles>
+		<sourceFile filename="functions.lua" />
+		<sourceFile filename="register.lua" />
+
+
+		<sourceFile filename="realismUpdate_tractor.lua" />
+		<sourceFile filename="realismUpdate_powerConsumer.lua" />
+		<sourceFile filename="realismUpdate_baler.lua" />
+		<sourceFile filename="realismUpdate_loadXMLConfigData.lua" />
+    </extraSourceFiles>
+	<inputBindings>		
+    </inputBindings>
+</modDesc>
